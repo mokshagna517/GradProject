@@ -12,4 +12,4 @@ RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-
 
 COPY . /app
 ENV FLASK_APP=server/__init__.py
-CMD ["python", "manage.py", "start", "0.0.0.0:3000"]
+CMD ["python", "main_app.py", "start", "0.0.0.0:3000"]

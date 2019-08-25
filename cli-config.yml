@@ -29,16 +29,16 @@ image-name-run : "myappiptvq-flask-run"
 image-name-tools : "myappiptvq-flask-tools"
 
 # The command to build the code and docker image for RUN
-build-cmd-run : "python manage.py build"
+build-cmd-run : "python main_app.py build"
 # The command to execute tests for the code in the tools container
-test-cmd : "python manage.py test"
+test-cmd : "python main_app.py test"
 # The command to build the code and docker image for DEBUG
-build-cmd-debug : "python manage.py build"
+build-cmd-debug : "python main_app.py build"
 
 # The command to run the code in the run container
 run-cmd : ""
 # The command to execute debug of the code in the tools container
-debug-cmd : "python manage.py debug"
+debug-cmd : "python main_app.py debug"
 # The command to stop the code
 stop-cmd : ""
 

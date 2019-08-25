@@ -1,5 +1,0 @@
----
-applications:
- - name: recommendation_sys
-   random-route: true
-   memory: 128M
