@@ -6,8 +6,8 @@ applications:
   buildpack: python_buildpack
   command: python main_app.py start 0.0.0.0:$PORT
   memory: 512M
-  domain: not-used.net
-  host: not-used
+  domain: eu-gb.mybluemix.net
+  host: mybluemix
   env:
     FLASK_APP : server
     FLASK_DEBUG : false
