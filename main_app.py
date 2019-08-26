@@ -142,7 +142,7 @@ import sklearn
 
 port = int(os.getenv('PORT', 3000))
 
-UPLOAD_FOLDER = 'home/vcap/app/folder'
+UPLOAD_FOLDER = '/home/vcap/app/folder'
 # ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv'])
 
 app = Flask(__name__)
