@@ -7,7 +7,7 @@ applications:
   command: python main_app.py start 0.0.0.0:$PORT
   memory: 512M
   domain: eu-gb.mybluemix.net
-  host: mybluemix
+  host: recommendteamCHN
   env:
     FLASK_APP : server
     FLASK_DEBUG : false
