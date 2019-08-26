@@ -1,6 +1,5 @@
 Flask
 pandas
 numpy
-pickle
+pickle-mixin
 sklearn
-csv
