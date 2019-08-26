@@ -4,7 +4,7 @@ applications:
   timeout: 180
   name: MyAppIPTVQ
   buildpack: python_buildpack
-  command: python main_app.py start 0.0.0.0:$PORT
+  command: python main_app.py start 0.0.0.0:3000
   memory: 512M
   domain: eu-gb.mybluemix.net
   host: recommendteamCHN
