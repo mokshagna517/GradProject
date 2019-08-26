@@ -142,7 +142,7 @@ import sklearn
 
 port = int(os.getenv('PORT', 3000))
 
-UPLOAD_FOLDER = 'C:/Users/SAITEJA/Desktop/recommendation_sys/folder'
+UPLOAD_FOLDER = './folder'
 # ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv'])
 
 app = Flask(__name__)
