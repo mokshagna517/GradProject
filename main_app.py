@@ -140,6 +140,7 @@ import os
 import pickle
 import sklearn
 
+port = int(os.getenv('PORT', 3000))
 
 UPLOAD_FOLDER = 'C:/Users/SAITEJA/Desktop/recommendation_sys/folder'
 # ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv'])
@@ -283,7 +284,7 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 
 
