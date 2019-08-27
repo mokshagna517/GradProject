@@ -147,7 +147,7 @@ UPLOAD_FOLDER = '/home/vcap/app/folder'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
+sex = ""
 
 
 @app.route("/")
@@ -183,6 +183,14 @@ def predicted_results():
         if customer_id == row2[1]:
             print(row2)
             break
+    global sex
+
+    if row2[8] == "0":
+        sex = "Male"
+    else:
+        sex = "Female"
+
+    print(sex)
 
     # fetching details of customer from x_test
     for row1 in x_test_csv_file:
@@ -266,7 +274,7 @@ def predicted_results():
     return render_template("predicted_results.html", array_details=row2, mortgage=var, overdraft=var1, credit=var2,
                            savings=var3[0],
                            score=predicted_output, score_overdraft=predicted_output1, score_credit=predicted_output2,
-                           score_savings=predicted_output3)
+                           score_savings=predicted_output3, sex=sex)
 
 
 @app.route('/upload_file', methods=['POST'])
