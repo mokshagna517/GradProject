@@ -48,7 +48,7 @@
 					<form action="https://recommendteamchn.eu-gb.mybluemix.net/predicted_results" method="POST">
 					  <div class="form-group">
 					    <label for="CustomerID">Customer Id</label>
-					    <input type="text" pattern="\d*" maxlength="15" class="form-control form-control-lg" id="CustomerID" name="CustomerID" placeholder="Enter Customer Id" required>
+					    <input type="text" pattern="\d*" maxlength="15" class="form-control form-control-lg" id="CustomerID" name="CustomerID" placeholder="Enter Customer Id" required min="8000" max="10000">
 					  </div>
 					  <button type="submit" class="btn btn-block btn-dark btn-lg" style="margin-top:30px;">Submit</button>
 					</form>
