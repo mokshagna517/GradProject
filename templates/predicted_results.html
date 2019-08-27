@@ -13,7 +13,7 @@
 
     <title>Home</title>
   </head>
-  <body>
+ <body>
    	<div class="container-fluid">
    		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
 
@@ -25,7 +25,7 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="https://recommendteamchn.eu-gb.mybluemix.net/">Home <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="https://recommendteamchn.eu-gb.mybluemix.net">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		    </ul>
 		  </div>
@@ -36,130 +36,63 @@
 
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="jumbotron jumbotron-fluid" >
+				<div class="jumbotron jumbotron-fluid" id="Custom-Jumbo">
 			  		<div class="container">
-			    		<h2 class="display-4" style="text-align: center;">Recommendations</h2>
+			    		<h3 class="display-4" style="text-align: center;">Recommendations</h3>
 			  		</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-12">
-			<div class="row">
-				<div class="offset-lg-2"></div>
-				<div class="col-lg-8">
-					<div class="jumbotron jumbotron-fluid" style="background: white;border: 1px solid #0000006e;border-radius: 12px;">
-					  <div class="container">
-					    <h3>Customer Details</h3>
-					    <br>
-<!--					    <ul class="list-group list-group-flush">-->
-<!--						  <li class="list-group-item">Customer ID: &nbsp;&nbsp;&nbsp; {{array_details[1]}} </li>-->
-<!--                          <li class="list-group-item">Age: &nbsp;&nbsp;&nbsp; {{array_details[2]}}</li>-->
-<!--						  <li class="list-group-item">Monthly Income: &nbsp;&nbsp;&nbsp; {{array_details[3]}} </li>-->
-<!--						  <li class="list-group-item">Credit Card Balance: &nbsp;&nbsp;&nbsp; {{array_details[4]}}</li>-->
-
-<!--&lt;!&ndash;						  <li class="list-group-item">Vestibulum at eros</li>&ndash;&gt;-->
-<!--						</ul>-->
-
-                          <table class="table">
-					    	<tr>
-					    		<td>Customer ID</td>
-					    		<td>{{array_details[1]}}</td>
-					    	</tr>
-					    	<tr>
-					    		<td>Age</td>
-					    		<td>{{array_details[2]}}</td>
-					    	</tr>
-					    	<tr>
-					    		<td>Monthly Income</td>
-					    		<td>{{array_details[4]}}</td>
-					    	</tr>
-					    	<tr>
-					    		<td>Credit Card Balance:</td>
-					    		<td>{{array_details[5]}}</td>
-					    	</tr>
-					    </table>
-					  </div>
-					</div>
-				</div>
-			</div>
-			</div>
-			<div class="col-lg-12">
-			<div class="row">
-				<div class="offset-lg-2"></div>
-				<div class="col-lg-8">
-					<div class="jumbotron jumbotron-fluid" style="background: white;border: 1px solid #0000006e;border-radius: 12px;">
-					  <div class="container">
-						
-					  	<div class="row">
-					  		<div class="col-lg-6"><h3>Recommendations</h3></div>
-					  		<div class="col-lg-6">
-					  			<button class="btn btn-lg btn-outline-dark" id="GetScores" style="float: right;">Get Scores</button>
-					  			<!-- Modal -->
-								<div class="modal fade" id="GetScoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-								  <div class="modal-dialog modal-dialog-centered" role="document">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <h5 class="modal-title" id="exampleModalCenterTitle">Score</h5>
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								          <span aria-hidden="true">&times;</span>
-								        </button>
-								      </div>
-								      <div class="modal-body">
-								        <table class="table">
-					    				<tr>
-					    					<td>Mortgage</td>
-					    					<td>{{score}}</td>
-					    				</tr>
-<!--					    				<tr>-->
-<!--					    				<td>Age</td>-->
-<!--					    				<td>{{array_details[2]}}</td>-->
-<!--					    				</tr>-->
-<!--					    				<tr>-->
-<!--					    					<td>Monthly Income</td>-->
-<!--					    					<td>{{array_details[4]}}</td>-->
-<!--					    				</tr>-->
-<!--					    				<tr>-->
-<!--					    					<td>Credit Card Balance:</td>-->
-<!--					    					<td>{{array_details[5]}}</td>-->
-<!--					    				</tr>-->
-					    				</table>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								      </div>
-								    </div>
-								  </div>
-								</div>
-					  		</div>
-					  	</div>
-					    <br>
-					    <table class="table">
-					    	<tr>
-					    		<td>Mortgage</td>
-					    		<td>{{mortgage}}</td>
+			<div class="col-sm-12 col-md-4 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static',filename='styles/img_man.png') }}">
+                    <div class="card-block">
+                        <h4 class="card-title">Customer Id : {{array_details[1]}}</h4>
+                        <div class="meta">
+                            <p class="text-primary">Age : {{array_details[2]}}</p>
+                        </div>
+                        <div class="card-text">
+                            <p> Monthly Income : {{array_details[4]}} </p>
+							<p> Credit Card Balance: {{array_details[5]}}</p>
+							<p> Mortgage Balance: {{array_details[6]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-lg-9 col-md-8 col-sm-12 mb-4">
+				<div class="row">
+					<div class="col-lg-12">
+						<table class="table table-hover">
+							<tr>
+								<td>Mortgage</td>
+								<td>{{mortgage}}</td>
 								<td style="display: none" class="HiddenByDefault">{{score}}%</td>
-					    	</tr>
+							</tr>
 							<tr>
-					    		<td>Overdraft</td>
-					    		<td>{{overdraft}}</td>
+								<td>Overdraft</td>
+								<td>{{overdraft}}</td>
 								<td style="display: none" class="HiddenByDefault">{{score_overdraft}}%</td>
-					    	</tr>
+							</tr>
 							<tr>
-					    		<td>Credit Card</td>
-					    		<td>{{credit}}</td>
+								<td>Credit Card</td>
+								<td>{{credit}}</td>
 								<td style="display: none" class="HiddenByDefault">{{score_credit}}%</td>
-					    	</tr>
+							</tr>
 							<tr>
-					    		<td>Savings Account</td>
-					    		<td>{{savings}}</td>
+								<td>Savings Account</td>
+								<td>{{savings}}</td>
 								<td style="display: none" class="HiddenByDefault">{{score_savings}}%</td>
-					    	</tr>
-					    </table>
-					  </div>
+							</tr>
+						</table>
 					</div>
+					<div class="col-lg-12" style="text-align:center;">
+						<button class="btn btn-lg btn-outline-dark" id="GetScores" >Get Scores</button>
+					</div>
+					<div class="col-lg-4 mt-5 HiddenByDefault" style="display: none"><div id="piechart1"></div></div>
+					<div class="col-lg-4 mt-5 HiddenByDefault" style="display: none"><div id="piechart2"></div></div>
+					<div class="col-lg-4 mt-5 HiddenByDefault" style="display: none"><div id="piechart3"></div></div>
 				</div>
-			</div>
 			</div>
 		</div>
    	</div>
@@ -171,8 +104,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
+    
+	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart1);
+        google.charts.setOnLoadCallback(drawChart2);
+        google.charts.setOnLoadCallback(drawChart3);
+
+        function drawChart1() {
+            var m_score = google.visualization.arrayToDataTable([
+              ['Mortgage Recommendation Score', 'Probability'],
+              ['Yes',     {{score}}/100],
+              ['No',    [100-{{score}}]/100],
+
+            ]);
+
+            var options1 = {
+              title: 'Mortgage Recommendation',
+			  colors: ['#009fac', '#dbd9d9']
+            };
+
+            var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+
+            chart1.draw(m_score, options1);
+
+        }
+
+        function drawChart2() {
+            var c_score = google.visualization.arrayToDataTable([
+              ['CreditCard Recommendation Score', 'Probability'],
+              ['Yes',    {{score_overdraft}}/100],
+              ['No',     [100-{{score_overdraft}}]/100],
+
+            ]);
+            var options2 = {
+              title: 'Overdraft Recommendation',
+			  colors: ['#009fac', '#dbd9d9']
+            };
+
+            var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart2.draw(c_score, options2);
+         }
+
+        function drawChart3() {
+            var o_score = google.visualization.arrayToDataTable([
+              ['Overdraft Recommendation Score', 'Probability'],
+              ['Yes',     {{score_credit}}/100],
+              ['No',     [100-{{score_credit}}]/100],
+
+            ]);
+            var options3 = {
+              title: 'Credit card Recommendation',
+			  colors: ['#009fac', '#dbd9d9']
+            };
+            var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+            chart3.draw(o_score, options3);
+        }
+    </script>
+	  
+	  <script>
         $(document).ready(function(){
             $("#GetScores").click(function(event){
                 event.preventDefault();
