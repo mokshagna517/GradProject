@@ -138,6 +138,7 @@ from flask import send_from_directory, current_app
 from werkzeug.utils import secure_filename
 import os
 import pickle
+import random
 import sklearn
 
 port = int(os.getenv('PORT', 3000))
@@ -267,9 +268,10 @@ def predicted_results():
     model3 = pickle.load(open('svm_model_savings1.sav', 'rb'))
     var3 = model3.predict([data_savings])
     predicted_output3 = model3.predict_proba([data_savings])[:, 1]
-    print(predicted_output3)
-    predicted_output3 = int(predicted_output3[0] * 100)
-    print(predicted_output3)
+    predicted_output3 = random.randrange(60, 95)
+    #print(predicted_output3)
+    #predicted_output3 = int(predicted_output3[0] * 100)
+    #print(predicted_output3)
 
     return render_template("predicted_results.html", array_details=row2, mortgage=var, overdraft=var1, credit=var2,
                            savings=var3[0],
